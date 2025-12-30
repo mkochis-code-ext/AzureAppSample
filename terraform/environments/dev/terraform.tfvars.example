@@ -1,0 +1,32 @@
+# Environment Configuration
+environment_prefix = "dev"
+workload          = "webapp"
+location          = "eastus"
+data_location     = ""  # Defaults to location if not specified
+
+# Tags
+tags = {
+  Project     = "Azure App Sample"
+  Owner       = "Platform Team"
+  CostCenter  = "Engineering"
+}
+
+# Network Configuration
+vnet_address_space            = "10.0.0.0/16"
+app_subnet_address_prefix     = "10.0.1.0/24"
+appgw_subnet_address_prefix   = "10.0.2.0/24"
+pe_subnet_address_prefix      = "10.0.3.0/24"
+
+# App Service Configuration
+app_service_sku = "B1"  # Options: B1, B2, B3, S1, S2, S3, P1v2, P2v2, P3v2
+
+# Application Gateway Configuration
+appgw_sku_name  = "Standard_v2"  # Options: Standard_v2, WAF_v2
+appgw_sku_tier  = "Standard_v2"  # Options: Standard_v2, WAF_v2
+appgw_capacity  = 2              # Number of instances
+
+# SSL Certificate Configuration
+# Generate certificate using: .\Generate-AppGatewayCert.ps1
+# Then copy the output values here:
+ssl_certificate_data     = "BASE64_ENCODED_CERTIFICATE_DATA_HERE"
+ssl_certificate_password = "P@ssw0rd123!"
