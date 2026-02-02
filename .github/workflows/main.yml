@@ -47,6 +47,7 @@ jobs:
       TF_VAR_vm_admin_password: ${{ secrets.DEV_VM_ADMIN_PASSWORD }}
       TF_VAR_ssl_certificate_data: ${{ secrets.DEV_SSL_CERT_DATA }}
       TF_VAR_ssl_certificate_password: ${{ secrets.DEV_SSL_CERT_PASSWORD }}
+      TF_VAR_location: ${{ secrets.DEV_LOCATION }}
     
     steps:
       - name: Checkout Code
